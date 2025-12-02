@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kvadrati i gumbi</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="square1" class="square">1</div>
+    <div id="square2" class="square">2</div>
+    <div id="square3" class="square">3</div>
+    <div id="square4" class="square">4</div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="promijeniBoju1()">Promijeni 1</button>
+    <button onclick="promijeniBoju2()">Promijeni 2</button>
+    <button onclick="promijeniTekst3()">Promijeni 3</button>
+    <button onclick="promijeniSve()">Promijeni sve</button>
+  </div>
+
+  <script src="skripta-7.js"></script>
+
+</body>
+</html>
