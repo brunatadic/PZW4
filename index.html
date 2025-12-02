@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js" defer></script>
+    <title>QR Kod generator</title>
+    <style>
+      #spinner {
+        display: none;
+        max-width: 50px;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>QR Kod generator</h1>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <p>
+                QR kod generator omogućava jednostavan pristup web stranicama skeniranjem koda putem mobitela.
+            </p>
+            <p>
+                Unesite web adresu (URL) u polje ispod kako bi generirali QR kod.
+            </p>
+
+            <form id="generate-form">
+                <input id="url" type="url" placeholder="Unesite web adresu" class="" required/>
+                <select class="" name="size" id="size">
+                    <option value="100">100x100</option>
+                    <option value="200">200x200</option>
+                    <option value="300" selected>300x300</option>
+                    <option value="400">400x400</option>
+                    <option value="500">500x500</option>
+                    <option value="600">600x600</option>
+                    <option value="700">700x700</option>
+                </select>
+                <button class="" type="submit">Generiraj QR Kod</button>
+            </form>
+
+            <div id="generated" class="">
+
+                <!-- Spinner -->
+                <div id="spinner" role="status">
+                    <img src="img/tube-spinner.svg" alt="">
+                    <span class="sr-only">Učitavanje...</span>
+                </div>
+ 
+                <div id="qrcode" class=""></div>
+
+            </div>
+
+        </div>
+    </main>
+    
+</body>
+</html>
